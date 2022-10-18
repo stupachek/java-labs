@@ -38,8 +38,8 @@ public class Lab1{
         }
     }
 
-    public static double func(byte a, byte b, byte n, byte m){
-        double result = 0;
+    public static float func(byte a, byte b, byte n, byte m){
+        float result = 0;
         for(byte i = a; i <=n; i++){
             for(byte j = b; j <= m; j++){
                 result =result+(((i / (float) j) / (i + C)));

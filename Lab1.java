@@ -11,12 +11,13 @@ C = 0
 i, j byte
  */
 
-public class Lab1{
+public class Lab1 {
     static int C = 0;
-    public static void main(String[] args){
+
+    public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        byte a, b, n,m;
-        for(;;){
+        byte a, b, n, m;
+        for (; ; ) {
             System.out.println("Введіть дані:");
             System.out.println("a:");
             a = scanner.nextByte();
@@ -28,24 +29,24 @@ public class Lab1{
             m = scanner.nextByte();
             System.out.println(a);
             // Перевірка ділення на 0:
-            if ((a <= -C && n >= -C) || ( b <= 0 && m >= 0 )){
+            if ((a <= -C && n >= -C) || (b <= 0 && m >= 0)) {
                 System.out.println("Некоректний діапазон.Ділення на 0");
-            }else{
-                double result = func(a,b,n,m);
+            } else {
+                float result = func(a, b, n, m);
                 System.out.println("Результат: " + result);
                 break;
             }
         }
     }
 
-    public static float func(byte a, byte b, byte n, byte m){
+    public static float func(byte a, byte b, byte n, byte m) {
         float result = 0;
-        for(byte i = a; i <=n; i++){
-            for(byte j = b; j <= m; j++){
-                result =result+(((i / (float) j) / (i + C)));
+        for (byte i = a; i <= n; i++) {
+            for (byte j = b; j <= m; j++) {
+                result = result + (((i / (float) j) / (i + C)));
             }
         }
-        return  result;
+        return result;
     }
 
 }
